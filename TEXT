@@ -18,6 +18,49 @@
             padding: 1rem;
             text-align: center;
         }
+        nav {
+            background-color: #003366;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         .container {
             width: 80%;
             margin: auto;
@@ -66,28 +109,60 @@
         <h1>Jérémie de Sousa und Philipp Huber</h1>
         <p>AI-Experten für Firmen</p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#about">Über Uns</a></li>
+            <li class="dropdown">
+                <a href="#offer" class="dropbtn">Unser Angebot</a>
+                <div class="dropdown-content">
+                    <a href="#consulting">AI-Beratung</a>
+                    <a href="#implementation">Implementierung</a>
+                    <a href="#training">Training</a>
+                    <a href="#support">Support</a>
+                </div>
+            </li>
+            <li><a href="#photos">Fotos</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <section class="intro">
+        <section id="about" class="intro">
             <h2>Über Uns</h2>
             <p>Wir sind Jérémie de Sousa und Philipp Huber, erfahrene Experten für künstliche Intelligenz, die Unternehmen dabei unterstützen, ihre Prozesse durch innovative AI-Lösungen zu optimieren. Mit jahrelanger Erfahrung und einem tiefen Verständnis für modernste Technologien helfen wir Firmen, wettbewerbsfähig und zukunftssicher zu bleiben.</p>
         </section>
-        <section class="offer">
+        <section id="offer" class="offer">
             <h2>Unser Angebot</h2>
             <p>Wir bieten maßgeschneiderte AI-Lösungen, die speziell auf die Bedürfnisse Ihrer Firma zugeschnitten sind. Unsere Dienstleistungen umfassen:</p>
             <ul>
-                <li>AI-Beratung und Strategieentwicklung</li>
-                <li>Implementierung von AI-Technologien</li>
-                <li>Training und Weiterbildung Ihrer Mitarbeiter im Bereich AI</li>
-                <li>Support und Wartung Ihrer AI-Systeme</li>
+                <li><a href="#consulting">AI-Beratung und Strategieentwicklung</a></li>
+                <li><a href="#implementation">Implementierung von AI-Technologien</a></li>
+                <li><a href="#training">Training und Weiterbildung Ihrer Mitarbeiter im Bereich AI</a></li>
+                <li><a href="#support">Support und Wartung Ihrer AI-Systeme</a></li>
             </ul>
+            <article id="consulting">
+                <h3>AI-Beratung und Strategieentwicklung</h3>
+                <p>Wir analysieren Ihre Geschäftsprozesse und entwickeln maßgeschneiderte Strategien zur Implementierung von AI-Lösungen, um Ihre Effizienz und Wettbewerbsfähigkeit zu steigern.</p>
+            </article>
+            <article id="implementation">
+                <h3>Implementierung von AI-Technologien</h3>
+                <p>Unsere Experten unterstützen Sie bei der Einführung und Integration fortschrittlicher AI-Technologien in Ihre bestehenden Systeme und Abläufe.</p>
+            </article>
+            <article id="training">
+                <h3>Training und Weiterbildung</h3>
+                <p>Wir bieten Schulungen und Workshops für Ihre Mitarbeiter an, um das Wissen und die Fähigkeiten im Umgang mit AI-Technologien zu erweitern.</p>
+            </article>
+            <article id="support">
+                <h3>Support und Wartung</h3>
+                <p>Unser Team steht Ihnen für den kontinuierlichen Support und die Wartung Ihrer AI-Systeme zur Verfügung, um einen reibungslosen Betrieb zu gewährleisten.</p>
+            </article>
         </section>
-        <section class="photos">
+        <section id="photos" class="photos">
             <h2>Unsere Arbeit</h2>
             <img src="https://via.placeholder.com/300?text=Gruppenstruktur" alt="Gruppenstruktur">
             <img src="https://via.placeholder.com/300?text=Fortgeschrittene+Technik" alt="Fortgeschrittene Technik">
             <img src="https://via.placeholder.com/300?text=Zufriedene+Kunden" alt="Zufriedene Kunden">
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Kontakt</h2>
             <form action="mailto:example@example.com" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Ihr Name" required>
